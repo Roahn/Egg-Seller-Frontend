@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import {getAuth} from 'firebase/auth';
+import { getAuth} from 'firebase/auth';
 var firebaseConfig = {
   apiKey: 'AIzaSyAEK48N-gPRDtSKAy-nHS5R2KuLe_s7h50',
   authDomain: 'resume-builder-ad297.firebaseapp.com',
