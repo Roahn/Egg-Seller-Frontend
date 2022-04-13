@@ -8,37 +8,36 @@ import SignIn from './SignIn';
 import { authentication } from './Firebase/firebase';
 function App() {
   const [isUserSignedIn, setIsUserSignedIn] = React.useState(false);
+  
+    var userObj = authentication.currentUser;
+
   onAuthStateChanged(authentication, (user) => {
     if (user) {
+      
+      userObj = authentication.currentUser;
+      console.log(userObj);
+
       return setIsUserSignedIn(true);
     }
     setIsUserSignedIn(false);
-    console.log(isUserSignedIn);
   });
-   if (isUserSignedIn)
-   {
-     return (
-       <Router>
-         <Routes>
-           
-           <Route path='/' exact='true' element={<Home />} />
-           
-         </Routes>
-       </Router>
-     );
-   }else
-   {
-     return (
-       <Router>
-         <Routes>
-           
-           <Route path='/' exact='true' element={<SignIn />} />
-           
-         </Routes>
-       </Router>
-     )
-   }
-    
+  if (isUserSignedIn) {
+    return (
+      <Router>
+        <Routes>
+          <Route path='/' exact='true' element={<Home  title={userObj}></Home>} />
+        </Routes>
+      </Router>
+    );
+  } else {
+    return (
+      <Router>
+        <Routes>
+          <Route path='/' exact='true' element={<SignIn />} />
+        </Routes>
+      </Router>
+    );
+  }
 }
 
 export default App;
