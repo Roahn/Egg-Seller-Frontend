@@ -15,7 +15,7 @@ function App() {
     if (user) {
       
       userObj = authentication.currentUser;
-      console.log(userObj);
+      //console.log(userObj);
 
       return setIsUserSignedIn(true);
     }
