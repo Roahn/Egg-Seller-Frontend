@@ -3,8 +3,8 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
-import Home from './Home';
-import SignIn from './SignIn';
+import Home from './Components/Home';
+import SignIn from './Components/SignIn';
 import { authentication } from './Firebase/firebase';
 function App() {
   const [isUserSignedIn, setIsUserSignedIn] = React.useState(false);

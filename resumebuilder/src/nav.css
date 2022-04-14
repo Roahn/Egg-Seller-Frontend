@@ -1,0 +1,41 @@
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  margin-left: 50%;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+  margin-left: 20px;
+}
+#UserPhoto {
+  position: absolute;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  left: 0;
+  top: 0;
+}
+
+#EmailNameBox {
+  position: absolute;
+
+  left: 60px;
+  top: 00px;
+}
+#UserName {
+  padding: 0px;
+  font-size: 30px;
+  margin-top: -3px;
+  
+  font-family: 'Permanent Marker', cursive;
+  
+}
+#UserEmail
+{
+ font-size: 15px;
+ margin-top: -2rem;
+ 
+}
