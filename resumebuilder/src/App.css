@@ -27,7 +27,15 @@
 .App-link {
   color: #61dafb;
 }
-
+.addEggs {
+  background-color: rgb(141, 50, 50);
+  width:50px;
+  height:250px;
+ 
+}
+.addEggs h1 {
+  color: green;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -5,7 +5,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import Home from './Components/Home';
 import SignIn from './Components/SignIn';
+import Data from './Components/Data';
 import { authentication } from './Firebase/firebase';
+import AddEggs from './Components/AddEggs'
 function App() {
   const [isUserSignedIn, setIsUserSignedIn] = React.useState(false);
   
@@ -25,7 +27,25 @@ function App() {
     return (
       <Router>
         <Routes>
-          <Route path='/' exact='true' element={<Home  title={userObj}></Home>} />
+          <Route
+            path='/'
+            exact='true'
+            element={<Home title={userObj}></Home>}
+          />
+        </Routes>
+        <Routes>
+          <Route
+            path='/data'
+            exact='true'
+            element={<Data></Data>}
+          />
+        </Routes>
+         <Routes>
+          <Route
+            path='/Buy'
+            exact='true'
+            element={<AddEggs></AddEggs>}
+          />
         </Routes>
       </Router>
     );
