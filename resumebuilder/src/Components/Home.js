@@ -58,19 +58,20 @@ export default function Home(props) {
             -
           </button>
         </section>
-      </section>
-      <br></br>
-      <section className="PriceContainer">
-    <label className='labelTag'>Egg Price</label>
-    <br></br>
-      <input className='form' type='text' value={count * Rate} id='rate' />
-      </section>
-     
-      <Link to='/Buy'>
+        <br />
+        <section className='PriceContainer'>
+          <label className='labelTag'>Egg Price</label>
+          <br></br>
+          <input className='form' type='text' value={count * Rate} id='rate' />
+          <Link to='/Buy'>
         <button className='btn btn-primary' id='Buy'>
           Checkout
         </button>
       </Link>{' '}
+        </section>
+      </section>
+      <br></br>
+      
     </>
   );
 }
