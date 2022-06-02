@@ -28,7 +28,7 @@ li {
 #UserName {
   padding: 0px;
   font-size: 30px;
-  margin-top: -3px;
+  margin-top: 1px;
   
   font-family: 'Permanent Marker', cursive;
   
@@ -36,6 +36,6 @@ li {
 #UserEmail
 {
  font-size: 15px;
- margin-top: -2rem;
+ margin-top: 8px;
  
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import {authentication} from '../Firebase/firebase'
 import {signInWithPopup , GoogleAuthProvider} from 'firebase/auth';
 import '../GB.css'
+import Landing from './Landing';
 var userInfo =55;
 const SignIn=()=> {
   const SignInWithFirebase = ()=>{
@@ -23,12 +24,8 @@ const SignIn=()=> {
     <>
       {/* <button onClick={SignInWithFirebase}>Sign In With Google</button>
        */}
-      <div className="decore">
-       
-      </div>
-      <div className="LogoName">
-
-      </div>
+      <div className='decore'></div>
+      <div className='LogoName'></div>
       <ul className='navbar'>
         <li>Home</li>
         <li>Services</li>
@@ -36,11 +33,11 @@ const SignIn=()=> {
         <li>About</li>
         <li>Contact</li>
         <li>
-          <button onClick={SignInWithFirebase}>
-           Login
-          </button>
+          <button onClick={SignInWithFirebase}>Login</button>
         </li>
       </ul>
+
+      <Landing></Landing>
     </>
   );
 }
