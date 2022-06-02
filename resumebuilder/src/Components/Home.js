@@ -19,7 +19,7 @@ export default function Home(props) {
     <>
       <Nav Info={profile}></Nav>
       {/* <button onClick={signOut}>Sign OUT</button> */}
-
+      <h1>Egg Seller</h1>
       <div className='container'>
         <Link to='/data'>Form Data</Link>
       </div>

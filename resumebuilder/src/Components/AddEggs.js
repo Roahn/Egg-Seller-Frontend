@@ -2,21 +2,23 @@ import React from 'react'
 import '../AddEg.css'
 export default function AddEggs() {
 
-  const [count, setCount] = React.useState(0);
+ // const [count, setCount] = React.useState(0);
  
 
   
-  function handleClick(){
+  /*function handleClick(){
     setCount(count + 1);
   } 
 
   function handleClick2(){
     setCount(count - 1);
-  } 
+  } */
 
   return (
     <div className="parent">
-      <p className="card-body">{count} </p>
+
+      
+      {/* <p className="card-body">{count} </p>
 
       <button onClick={handleClick} className='btn btn-success'>
         +
@@ -26,7 +28,9 @@ export default function AddEggs() {
       </button>
      <br></br>
 
-      <button className='btn btn-primary'> Checkout</button>
+      <button className='btn btn-primary'> Checkout</button> */}
+
+      <h1>bhvjh</h1>
     </div>
   );
   
