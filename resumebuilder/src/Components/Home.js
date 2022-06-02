@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 // import { getAuth, signOut } from "firebase/auth";
-import {Link} from 'react-router-dom';
-import '../Home.css'
+import { Link } from 'react-router-dom';
+import '../Home.css';
 
 import Nav from './Nav';
 export default function Home(props) {
@@ -9,14 +9,28 @@ export default function Home(props) {
   const numberOfEggs = 0;
 
   const [count, setCount] = React.useState(0);
+  //const [price, setPrice] = React.useState(0);
+  const Rate = 7;
 
-  function handleClick(){
+  React.useEffect(() => {
+    setCount(count);
+    //setPrice(price);
+  }, [count]);
+  function handleIncrease() {
+
     setCount(count + 1);
-  } 
 
-  function handleClick2(){
-    setCount(count - 1);
-  } 
+    //setPrice(Rate*count);
+  }
+
+  function handleDecrease() {
+    if(count>0)
+    {
+      setCount(count - 1);
+    }
+    
+    ///setPrice(Rate * count);
+  }
   //  const auth = getAuth();
   // const signOut = ()=>{
   //     //console.log('SignOUT')
@@ -31,27 +45,32 @@ export default function Home(props) {
       {/* <div className='container'>
         <Link to='/data'>Form Data</Link>
       </div> */}
-      <p className="card-body">{count} </p>
-
-      <button onClick={handleClick} className='btn btn-success'>
-        +
-      </button>
-      <button onClick={handleClick2} className='btn btn-danger'>
-        -
-      </button>
-     <br></br>
-
-      <button className='btn btn-primary'> Checkout</button>
+      <section className='container'>
+        <label className='label'>Egg Count</label>
+        <input className='form' type='text' value={count} id='count' />
+        <br />
+        <section className='btnContainer'>
+          <button onClick={handleIncrease} className='btn btn-success'>
+            +
+          </button>
+          <br />
+          <button onClick={handleDecrease} className='btn btn-danger'>
+            -
+          </button>
+        </section>
+      </section>
       <br></br>
+      <section className="PriceContainer">
+    <label className='labelTag'>Egg Price</label>
+    <br></br>
+      <input className='form' type='text' value={count * Rate} id='rate' />
+      </section>
+     
       <Link to='/Buy'>
         <button className='btn btn-primary' id='Buy'>
           Checkout
         </button>
       </Link>{' '}
-
-      
     </>
   );
 }
-
-

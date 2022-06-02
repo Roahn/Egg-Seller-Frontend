@@ -18,3 +18,31 @@ a {
   left:80%;
   width:100px;
 }
+
+.container
+{
+  margin: auto;
+  width: 70%;
+  margin-top: 2rem;
+}
+.btnContainer
+{
+  padding:30px;
+}
+btn-success{
+  width: 100px !important;
+}
+.PriceContainer
+{
+  position: absolute;
+  margin-top: 5rem;
+  right: 10rem;
+}
+.labelTag{
+
+    margin-bottom: 10px;
+}
+label{
+  font-size: larger;
+  padding:2rem;
+}
