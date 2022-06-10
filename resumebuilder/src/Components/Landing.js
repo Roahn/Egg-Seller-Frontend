@@ -17,11 +17,14 @@ export default function Landing() {
       console.log(err)
     })
   }
-  return (<>
-  <div>
-    <h1>Egg Seller</h1>
-    <button className='buy' onClick={SignInWithFirebase}>Buy Eggs</button>
-  </div>
-  </>
-  )
+  return (
+    <>
+      <div>
+        <h1 id='landingh1'>Egg Seller</h1>
+        <button className='buy' onClick={SignInWithFirebase}>
+          Buy Eggs
+        </button>
+      </div>
+    </>
+  );
 }

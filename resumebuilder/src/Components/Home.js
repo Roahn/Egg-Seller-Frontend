@@ -41,13 +41,20 @@ export default function Home(props) {
     <>
       <Nav Info={profile}></Nav>
       {/* <button onClick={signOut}>Sign OUT</button> */}
-      <h1>Egg Seller</h1>
+
       {/* <div className='container'>
         <Link to='/data'>Form Data</Link>
       </div> */}
       <section className='container'>
         <label className='label'>Egg Count</label>
-        <input className='form' type='text' value={count} id='count' />
+        <input
+          className='form'
+          type='text'
+          
+          id='count'
+          value={count}
+         
+        />
         <br />
         <section className='btnContainer'>
           <button onClick={handleIncrease} className='btn btn-success'>
@@ -59,19 +66,24 @@ export default function Home(props) {
           </button>
         </section>
         <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <section className='PriceContainer'>
           <label className='labelTag'>Egg Price</label>
           <br></br>
           <input className='form' type='text' value={count * Rate} id='rate' />
           <Link to='/Buy'>
-        <button className='btn btn-primary' id='Buy'>
-          Checkout
-        </button>
-      </Link>{' '}
+            <button className='btn btn-primary' id='Buy'>
+              Checkout
+            </button>
+          </Link>
+          {/* {' '} */}
         </section>
       </section>
       <br></br>
-      
     </>
   );
 }

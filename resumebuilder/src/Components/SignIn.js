@@ -28,8 +28,8 @@ const SignIn=()=> {
       <div className='LogoName'></div>
       <ul className='navbar'>
         <li>Home</li>
-        <li>Services</li>
-        <li>Templates</li>
+        
+       
         <li>About</li>
         <li>Contact</li>
         <li>
