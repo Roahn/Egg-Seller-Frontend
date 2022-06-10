@@ -1,33 +1,22 @@
-import React from 'react'
-import './Admin.css'
+import React from 'react';
+import './Admin.css';
 import Nav from '../Components/Nav';
 import { Link } from 'react-router-dom';
 export default function AdminLog(props) {
-
-
-
- const profile = props.title;
-const ADD_FUNCTION = ()=>{
- 
-  fetch('http://localhost:4000/Add',{
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {
-      'Content-type': 'application/json',
-    },
-    body: JSON.stringify(props),
-  }).console.log("New Order Added")
- }
+  const profile = props.title;
 
   return (
     <>
       <Nav Info={profile}></Nav>
-      
-        <button className='btn btn-primary' id='Buy'
-        onClick={ADD_FUNCTION} >
-          ADd
-        </button>
-    
+      <form method='POST' action='/addTweet'>
+        <div class='input-group justify-content-center'>
+          <div class='input-group-prepend'>
+            <input type='text' name='tweetInput' class='form-control' />
+            <input type='submit' value='Send' class='btn btn-primary mb-2' />
+          </div>
+        </div>
+      </form>
+
       <br />
       <h1 id='AdminTitle'>Admin Page</h1>
     </>

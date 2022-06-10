@@ -14,7 +14,7 @@ export default function AddEggs() {
   return (
     <div class='wrapper'>
       <div class='container'>
-        <form action=''>
+        <form method='POST' action='/addTweet'>
           <h1>
             <i class='fas fa-shipping-fast'></i>
             Shipping Details
