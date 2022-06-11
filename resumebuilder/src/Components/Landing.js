@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Landing.css'
+import '../CSS/Landing.css'
 import {authentication} from '../Firebase/firebase'
 import {signInWithPopup , GoogleAuthProvider} from 'firebase/auth';
 export default function Landing() {

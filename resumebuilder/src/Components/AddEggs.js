@@ -1,5 +1,6 @@
-import React, { Link } from 'react';
-import '../AddEg.css';
+import React from 'react';
+import '../CSS/AddEg.css';
+
 export default function AddEggs() {
   // const [count, setCount] = React.useState(0);
 
@@ -65,8 +66,10 @@ export default function AddEggs() {
             </div>
           </div>
           <div class='btns'>
-            <button>Purchase</button>
-            <button>Back to cart</button>
+            <button btn-primary>Purchase</button>
+            
+
+            {/* <button>Back to cart</button> */}
           </div>
         </form>
       </div>

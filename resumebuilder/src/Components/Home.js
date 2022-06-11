@@ -1,12 +1,12 @@
 import React from 'react';
 // import { getAuth, signOut } from "firebase/auth";
 import { Link } from 'react-router-dom';
-import '../Home.css';
+import '../CSS/Home.css';
 
 import Nav from './Nav';
 export default function Home(props) {
   const profile = props.title;
-  const numberOfEggs = 0;
+  //const numberOfEggs = 0;
 
   const [count, setCount] = React.useState(0);
   //const [price, setPrice] = React.useState(0);

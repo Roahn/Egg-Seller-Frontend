@@ -1,9 +1,9 @@
 import React from 'react'
-import { getAuth, signOut } from 'firebase/auth';
-import '../nav.css'
-import { authentication } from '../Firebase/firebase';
+import { getAuth } from 'firebase/auth';
+import '../CSS/nav.css'
+// import { authentication } from '../Firebase/firebase';
 
-var user = authentication.currentUser;
+// var user = authentication.currentUser;
 
 
   

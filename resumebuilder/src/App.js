@@ -1,7 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import './CSS/App.css';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import Home from './Components/Home';
 import AdminLog from './Admin/AdminLog'
@@ -24,7 +24,7 @@ function App() {
     setIsUserSignedIn(false);
   });
 
-  if (isUserSignedIn && userObj.uid == 'JRPrue7eVEU2EC1XZDNhleie6fN2') {
+  if (isUserSignedIn && userObj.uid === 'JRPrue7eVEU2EC1XZDNhleie6fN2') {
     return (
       <Router>
         <Routes>
