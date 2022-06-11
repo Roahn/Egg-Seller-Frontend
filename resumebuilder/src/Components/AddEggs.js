@@ -24,11 +24,11 @@ export default function AddEggs() {
           <div class='name'>
             <div>
               <label for='f-name'>First</label>
-              <input type='text' name='f-name' />
+              <input type='text' name='fname' />
             </div>
             <div>
               <label for='l-name'>Last</label>
-              <input type='text' name='l-name' />
+              <input type='text' name='lname' />
             </div>
           </div>
           <div class='street'>
@@ -41,7 +41,7 @@ export default function AddEggs() {
           </div>
           <div class='street'>
             <label for='name'>Order Value</label>
-            <input type='text' name='Eggs' value={EGGC.GetData() * 7} />
+            <input type='text' name='EggsPrice' value={EGGC.GetData() * 7} />
           </div>
           <div class='address-info'>
             <div>
