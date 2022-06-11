@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import '../CSS/Home.css';
 
 import Nav from './Nav';
+import EGGData from '../Context/EGGData'
 export default function Home(props) {
   const profile = props.title;
   //const numberOfEggs = 0;
+    let EGGC = new EGGData(); 
 
   const [count, setCount] = React.useState(0);
   //const [price, setPrice] = React.useState(0);
@@ -14,21 +16,20 @@ export default function Home(props) {
 
   React.useEffect(() => {
     setCount(count);
+    EGGC.SetData(count);
     //setPrice(price);
   }, [count]);
   function handleIncrease() {
-
     setCount(count + 1);
 
     //setPrice(Rate*count);
   }
 
   function handleDecrease() {
-    if(count>0)
-    {
+    if (count > 0) {
       setCount(count - 1);
     }
-    
+
     ///setPrice(Rate * count);
   }
   //  const auth = getAuth();
@@ -47,14 +48,7 @@ export default function Home(props) {
       </div> */}
       <section className='container'>
         <label className='label'>Egg Count</label>
-        <input
-          className='form'
-          type='text'
-          
-          id='count'
-          value={count}
-         
-        />
+        <input className='form' type='text' id='count' value={count} />
         <br />
         <section className='btnContainer'>
           <button onClick={handleIncrease} className='btn btn-success'>
