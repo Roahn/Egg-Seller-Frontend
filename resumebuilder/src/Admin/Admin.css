@@ -3,3 +3,9 @@
 
  text-align: center;
 }
+.Dashsection{
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
