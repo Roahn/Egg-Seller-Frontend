@@ -9,6 +9,7 @@ import SignIn from './Components/SignIn';
 import Data from './Components/Data';
 import { authentication } from './Firebase/firebase';
 import AddEggs from './Components/AddEggs';
+import OrderList from './Components/OrderList';
 function App() {
   const [isUserSignedIn, setIsUserSignedIn] = React.useState(false);
 
@@ -52,6 +53,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path='/Buy' exact='true' element={<AddEggs></AddEggs>} />
+        </Routes>
+        <Routes>
+          <Route path='/OrderList' exact='true' element={<OrderList></OrderList>} />
         </Routes>
       </Router>
     );

@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{Link} from 'react'
 import { getAuth } from 'firebase/auth';
 import '../CSS/nav.css'
 // import { authentication } from '../Firebase/firebase';
@@ -20,7 +20,14 @@ export default function Nav  (props) {
       <ul className='navbar'>
         <li>Home</li>
         <li>Services</li>
-        <li>Templates</li>
+
+        <li>
+          
+          <a href='/OrderList'>
+           
+            My Orders 
+          </a>
+        </li>
         <li>About</li>
         <li>Contact</li>
         <li>
@@ -33,8 +40,6 @@ export default function Nav  (props) {
         <h4 id='UserName'>{displayName}</h4>
         <h4 id='UserEmail'>{email}</h4>
       </div>
-
-      
     </>
   );
 }
