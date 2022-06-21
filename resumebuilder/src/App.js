@@ -10,6 +10,7 @@ import Data from './Components/Data';
 import { authentication } from './Firebase/firebase';
 import AddEggs from './Components/AddEggs';
 import OrderList from './Components/OrderList';
+import Checkout from './Components/Checkout/Checkout';
 function App() {
   const [isUserSignedIn, setIsUserSignedIn] = React.useState(false);
 
@@ -18,7 +19,7 @@ function App() {
   onAuthStateChanged(authentication, (user) => {
     if (user) {
       userObj = authentication.currentUser;
-      console.log(userObj.uid);
+      console.log(userObj);
 
       return setIsUserSignedIn(true);
     }
@@ -55,7 +56,11 @@ function App() {
           <Route path='/Buy' exact='true' element={<AddEggs></AddEggs>} />
         </Routes>
         <Routes>
-          <Route path='/OrderList' exact='true' element={<OrderList></OrderList>} />
+          <Route
+            path='/Checkout'
+            exact='true'
+            element={<Checkout user={userObj}></Checkout>}
+          />
         </Routes>
       </Router>
     );

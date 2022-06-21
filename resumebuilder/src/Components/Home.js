@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import '../CSS/Home.css';
 
 import Nav from './Nav';
-import EGGData from '../Context/EGGData'
+import EGGData from '../Context/EGGData';
 export default function Home(props) {
   const profile = props.title;
   //const numberOfEggs = 0;
-    let EGGC = new EGGData(); 
+  let EGGC = new EGGData();
 
   const [count, setCount] = React.useState(0);
   //const [price, setPrice] = React.useState(0);
@@ -69,7 +69,7 @@ export default function Home(props) {
           <label className='labelTag'>Egg Price</label>
           <br></br>
           <input className='form' type='text' value={count * Rate} id='rate' />
-          <Link to='/Buy'>
+          <Link to='/Checkout'>
             <button className='btn btn-primary' id='Buy'>
               Checkout
             </button>
