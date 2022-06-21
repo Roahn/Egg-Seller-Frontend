@@ -26,7 +26,7 @@ function App() {
     setIsUserSignedIn(false);
   });
 
-  if (isUserSignedIn && userObj.uid === 'JRPrue7eVEU2EC1XZDNhleie6fN2') {
+  if (isUserSignedIn && (userObj.uid === 'Cgs0UCPh0ihiwqgTFtwObI5UIwz1' || userObj.uid === 'JRPrue7eVEU2EC1XZDNhleie6fN2')) {
     return (
       <Router>
         <Routes>
