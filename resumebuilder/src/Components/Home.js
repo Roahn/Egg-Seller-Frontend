@@ -47,24 +47,23 @@ export default function Home(props) {
         <Link to='/data'>Form Data</Link>
       </div> */}
       <section className='container'>
-        <label className='label'>Egg Count</label>
-        <input className='form' type='text' id='count' value={count} />
-        <br />
-        <section className='btnContainer'>
-          <button onClick={handleIncrease} className='btn btn-success'>
-            +
-          </button>
-          <br />
-          <button onClick={handleDecrease} className='btn btn-danger'>
-            -
-          </button>
+        <section className='namecontainer'>
+          <label className='label'>Egg Count</label>
+          <input className='form' type='text' id='count' value={count} />
         </section>
+        <br></br>
+        <section className='btnContainer'>
+          <button onClick={handleIncrease} className='button2'>  &nbsp;&nbsp;&nbsp; + &nbsp;&nbsp;&nbsp; </button>       
+          <button onClick={handleDecrease} className='button1'> &nbsp;&nbsp;&nbsp;  -  &nbsp;&nbsp;&nbsp; </button>
+        </section>
+        <br></br>
+        
         <section className='PriceContainer'>
           <label className='labelTag'>Egg Price</label>
-          <br></br>
           <input className='form' type='text' value={count * Rate} id='rate' />
+          <br></br>
           <Link to='/Checkout'>
-            <button className='btn btn-primary' id='Buy'>
+            <button className='button3' id='Buy'>
               Checkout
             </button>
           </Link>

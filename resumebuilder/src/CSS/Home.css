@@ -1,12 +1,9 @@
-
-
-a {
+/* a {
  text-decoration: none;
 }
 
 #Buy {
   text-align: center;
- 
   top:70%;
   left:80%;
   width:100px;
@@ -14,7 +11,7 @@ a {
 
 .btnContainer
 {
-  padding:30px;
+  
 }
 btn-success{
   width: 100px !important;
@@ -31,5 +28,61 @@ btn-success{
 }
 label{
   font-size: larger;
-  padding:2rem;
+  padding:4rem;
+} */
+.namecontainer{
+  margin: auto;
+  width: 50%;
+}
+.btnContainer{
+  margin: auto;
+  width: 50%;
+}
+.PriceContainer{
+  margin: auto;
+  width: 50%;
+}
+#Buy {
+  text-align: center;
+  top:70%;
+  left:80%;
+  width:100px;
+}
+.button1 {
+  color: #ffffff;
+  background-color: #e51c06;
+  font-size: 19px;
+  border: 1px solid #2d63c8;
+  margin-left: 50px;
+  cursor: pointer
+}
+.button1:hover {
+  color: #2d63c8;
+  background-color: #ffffff;
+}
+.button2 {
+  color: #ffffff;
+  background-color: #06b8e5;
+  font-size: 19px;
+  border: 1px solid #2d63c8;
+  margin-left: 20px;
+  cursor: pointer
+}
+.button2:hover {
+  color: #2d63c8;
+  background-color: #ffffff;
+}
+.form{
+  margin-left: 50px;
+}
+.button3 {
+  color: #ffffff;
+  background-color: #9ee506;
+  font-size: 19px;
+  border: 1px solid #2dc847;
+  cursor: pointer
+}
+.button3:hover {
+  color: #2d63c8;
+  background-color: #ffffff;
 }
