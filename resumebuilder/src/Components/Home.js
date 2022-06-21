@@ -63,7 +63,7 @@ export default function Home(props) {
           <label className='labelTag'>Egg Price</label>
           <br></br>
           <input className='form' type='text' value={count * Rate} id='rate' />
-          <Link to='/Checkout'>
+          <Link to='/Buy'>
             <button className='btn btn-primary' id='Buy'>
               Checkout
             </button>

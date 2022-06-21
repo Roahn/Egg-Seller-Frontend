@@ -19,7 +19,7 @@ function App() {
   onAuthStateChanged(authentication, (user) => {
     if (user) {
       userObj = authentication.currentUser;
-      console.log(userObj);
+      //console.log(userObj);
 
       return setIsUserSignedIn(true);
     }
@@ -53,13 +53,24 @@ function App() {
           <Route path='/data' exact='true' element={<Data></Data>} />
         </Routes>
         <Routes>
-          <Route path='/Buy' exact='true' element={<AddEggs></AddEggs>} />
+          <Route
+            path='/Buy'
+            exact='true'
+            element={<AddEggs user={userObj}></AddEggs>}
+          />
         </Routes>
         <Routes>
           <Route
             path='/Checkout'
             exact='true'
             element={<Checkout user={userObj}></Checkout>}
+          />
+        </Routes>
+        <Routes>
+          <Route
+            path='/OrderList'
+            exact='true'
+            element={<OrderList user={userObj}></OrderList>}
           />
         </Routes>
       </Router>

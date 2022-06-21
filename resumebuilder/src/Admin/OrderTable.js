@@ -18,7 +18,7 @@ import {
 import NumberFormat from 'react-number-format';
 
 // project import
-import Dot from './Dot';
+import Dot from '../Dot';
 
 function createData(trackingNo, name, fat, carbs, protein) {
   return { trackingNo, name, fat, carbs, protein };
@@ -178,7 +178,7 @@ export default function OrderTable() {
     const data = await fetch('/DashData');
     const items = await data.json(data);
     setItems(items);
-    console.log(items);
+    //console.log(items);
   };
 
   const isSelected = (trackingNo) => selected.indexOf(trackingNo) !== -1;
