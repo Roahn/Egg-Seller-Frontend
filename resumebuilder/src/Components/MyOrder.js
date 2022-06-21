@@ -236,7 +236,7 @@ export default function MyOrder({user}) {
                     </TableCell>
                     <TableCell align='right'>{row.COUNT}</TableCell>
                     <TableCell align='left'>
-                      <OrderStatus status={0} />
+                      <OrderStatus status={parseInt(row.status)} />
                     </TableCell>
                     <TableCell align='right'>
                       <NumberFormat
