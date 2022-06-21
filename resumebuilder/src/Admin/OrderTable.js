@@ -174,7 +174,7 @@ export default function OrderTable() {
    let navigate = useNavigate();
   useEffect(() => {
     fetchItems();
-  });
+  },[]);
   const [items, setItems] = useState([]);
   const Approve =async(tid)=>{
      const data = await fetch(`/status?tid=${tid} `);
