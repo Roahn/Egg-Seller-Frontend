@@ -3,6 +3,7 @@ import './Admin.css';
 import Nav from '../Components/Nav';
 import { Link } from 'react-router-dom';
 import DashboardData  from './DashboardData';
+import OrderTable from './OrderTable';
 export default function AdminLog(props) {
   const profile = props.title;
 
@@ -20,11 +21,12 @@ export default function AdminLog(props) {
 
       {/* <br /> */}
       <h1 id='AdminTitle'>Admin Page</h1>
+      {/* <section className='Dashsection'>
+        <DashboardData></DashboardData>
+      </section> */}
       <section className='Dashsection'>
-             <DashboardData>
-    </DashboardData>
+        <OrderTable></OrderTable>
       </section>
- 
     </>
   );
 }
