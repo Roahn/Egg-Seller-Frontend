@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
-import { Button } from 'antd';
-import { useNavigate } from 'react-router-dom';
 
 // material-ui
 import {
@@ -167,25 +165,21 @@ OrderStatus.propTypes = {
 
 // ==============================|| ORDER TABLE ||============================== //
 
-export default function OrderTable() {
+export default function MyOrder({user}) {
   const [order] = useState('asc');
   const [orderBy] = useState('trackingNo');
   const [selected] = useState([]);
-   let navigate = useNavigate();
-  useEffect(() => {
-    fetchItems();
-  });
-  const [items, setItems] = useState([]);
-  const Approve =async(tid)=>{
-     const data = await fetch(`/status?tid=${tid} `);
-     
-  }
-  const fetchItems = async () => {
-    const data = await fetch('/DashData');
-    const items = await data.json(data);
-    setItems(items);
-    //console.log(items);
-  };
+ useEffect(() => {
+   fetchItems();
+ }, []);
+ const [items, setItems] = useState([]);
+
+ const fetchItems = async () => {
+   const data = await fetch(`/UserOrderData?uid=${user.uid}`);
+   const items = await data.json(data);
+   setItems(items);
+ };
+
 
   const isSelected = (trackingNo) => selected.indexOf(trackingNo) !== -1;
 
@@ -218,7 +212,7 @@ export default function OrderTable() {
               (row, index) => {
                 const isItemSelected = isSelected(row._id);
                 const labelId = `enhanced-table-checkbox-${index}`;
-                console.log(row.status)
+
                 return (
                   <TableRow
                     hover
@@ -242,7 +236,7 @@ export default function OrderTable() {
                     </TableCell>
                     <TableCell align='right'>{row.COUNT}</TableCell>
                     <TableCell align='left'>
-                      <OrderStatus status={parseInt(row.status)} />
+                      <OrderStatus status={0} />
                     </TableCell>
                     <TableCell align='right'>
                       <NumberFormat
@@ -251,9 +245,6 @@ export default function OrderTable() {
                         thousandSeparator
                         prefix='₹'
                       />
-                    </TableCell>
-                    <TableCell align='left'>
-                      <Button type='primary' onClick={()=>{Approve(row._id)}}>Approve Order</Button>
                     </TableCell>
                   </TableRow>
                 );

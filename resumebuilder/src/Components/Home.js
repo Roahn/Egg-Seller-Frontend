@@ -63,11 +63,13 @@ export default function Home(props) {
           <input className='form' type='text' value={count * Rate} id='rate' />
           <br></br>
           <Link to='/Checkout'>
-            <button className='button3' id='Buy'>
+            
+          
+            <button className='btn btn-primary' id='Buy'>
               Checkout
             </button>
           </Link>
-          {/* {' '} */}
+         
         </section>
       </section>
       <br></br>

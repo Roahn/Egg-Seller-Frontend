@@ -51,13 +51,13 @@ export default function Checkout({ user }) {
   const [activeStep, setActiveStep] = React.useState(0);
   let navigate = useNavigate();
 
-  console.log('User Email' + user.email);
+  //console.log('User Email' + user.email);
   const [items, setItems] = React.useState([]);
 
   const fetchItems = async () => {
     const data = await fetch(`http://127.0.0.1:7777/user/?user=${user.email}`);
     //  const items = await data.json(data);
-    console.log('Res' + data);
+    ///console.log('Res' + data);
     navigate('/');
   };
   const handleNext = () => {
