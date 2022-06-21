@@ -1,7 +1,9 @@
 
 import React, { useEffect } from 'react';
 import MyOrder from './MyOrder';
+import Nav from './Nav';
 export default function OrderList({ user}) {
+  const profile = user;
     useEffect(() => {
       fetchItems();
     }, []);
@@ -16,8 +18,8 @@ export default function OrderList({ user}) {
     //console.log(items);
     return (
       <>
-      <MyOrder user={user}></MyOrder>
-  
+        <Nav Info={profile}></Nav>
+        <MyOrder user={user}></MyOrder>
       </>
     );
 }

@@ -28,7 +28,7 @@ export default function Nav  (props) {
         <li>
           <button onClick={GoHome}>Home</button>
         </li>
-        <li>Services</li>
+        
 
         <li>
           <a href='/OrderList'>My Orders</a>
