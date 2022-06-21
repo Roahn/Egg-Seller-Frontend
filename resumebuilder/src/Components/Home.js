@@ -59,12 +59,6 @@ export default function Home(props) {
             -
           </button>
         </section>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <section className='PriceContainer'>
           <label className='labelTag'>Egg Price</label>
           <br></br>

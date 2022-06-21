@@ -1,11 +1,4 @@
-.container
-{
 
- margin-top: 5rem;
- display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 a {
  text-decoration: none;
@@ -19,12 +12,6 @@ a {
   width:100px;
 }
 
-.container
-{
-  margin: auto;
-  width: 70%;
-  margin-top: 2rem;
-}
 .btnContainer
 {
   padding:30px;
