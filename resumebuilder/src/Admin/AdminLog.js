@@ -4,12 +4,12 @@ import Nav from '../Components/Nav';
 import { Link } from 'react-router-dom';
 import DashboardData  from './DashboardData';
 import OrderTable from './OrderTable';
-export default function AdminLog(props) {
-  const profile = props.title;
+export default function AdminLog({user}) {
+  console.log(user);
 
   return (
     <>
-      <Nav Info={profile}></Nav>
+      <Nav Info={user}></Nav>
       {/* <form method='POST' action='/addTweet'>
         <div class='input-group justify-content-center'>
           <div class='input-group-prepend'>
@@ -25,7 +25,7 @@ export default function AdminLog(props) {
         <DashboardData></DashboardData>
       </section> */}
       <section className='Dashsection'>
-        <OrderTable></OrderTable>
+        <OrderTable ></OrderTable>
       </section>
     </>
   );

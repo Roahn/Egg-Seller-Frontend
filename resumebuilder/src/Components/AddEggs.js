@@ -37,6 +37,10 @@ const profile = user;
             </div> */}
             </div>
             <div class='street'>
+              <label for='name'>Email Address</label>
+              <input type='text' name='email'  value={user.email} />
+            </div>
+            <div class='street'>
               <label for='name'>Address</label>
               <input type='text' name='address' />
             </div>

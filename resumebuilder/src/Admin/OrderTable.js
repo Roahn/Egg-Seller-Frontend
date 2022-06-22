@@ -171,11 +171,21 @@ export default function OrderTable() {
   const [order] = useState('asc');
   const [orderBy] = useState('trackingNo');
   const [selected] = useState([]);
+  
    let navigate = useNavigate();
   useEffect(() => {
     fetchItems();
   },[]);
   const [items, setItems] = useState([]);
+  const SendMail = async(user)=>{
+    console.log(user);
+      const data = await fetch(
+        `http://127.0.0.1:7777/user/?user=${user}`
+      );
+      //  const items = await data.json(data);
+      ///console.log('Res' + data);
+      navigate('/');
+  } 
   const Approve =async(tid)=>{
      const data = await fetch(`/status?tid=${tid} `);
      
@@ -253,7 +263,25 @@ export default function OrderTable() {
                       />
                     </TableCell>
                     <TableCell align='left'>
-                      <Button type='primary' onClick={()=>{Approve(row._id)}}>Approve Order</Button>
+                      <Button
+                        type='primary'
+                        onClick={() => {
+                          Approve(row._id);
+                        }}
+                      >
+                        Approve Order
+                      </Button>
+                    </TableCell>
+                    <TableCell align='left'>
+                      <Button
+                        type='primary'
+                        onClick={() => {
+                          console.log(row);
+                          SendMail(row.EMAIL);
+                        }}
+                      >
+                        Send Mail
+                      </Button>
                     </TableCell>
                   </TableRow>
                 );

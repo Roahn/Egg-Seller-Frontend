@@ -33,7 +33,7 @@ function App() {
           <Route
             path='/'
             exact='true'
-            element={<AdminLog title={userObj}></AdminLog>}
+            element={<AdminLog user={userObj}></AdminLog>}
           />
         </Routes>
        
