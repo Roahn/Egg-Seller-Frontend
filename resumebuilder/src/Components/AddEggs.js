@@ -58,7 +58,7 @@ const profile = user;
             </div>
 
             <div class='btns'>
-              <button btn-primary>Purchase</button>
+              <button id="purchase">Purchase</button>
 
               {/* <button>Back to cart</button> */}
             </div>
